@@ -18,22 +18,26 @@ function draw() {
 
   background("black"); 
   
-  if(car.x - wall.x < car.width/2 + wall.width/2 && wall.x - car.x < wall.width/2 + car.width/2
-     && car.y - wall.y < car.height/2 + wall.height/2 && wall.y - car.y < wall.height/2 + car.height/2){
-  
+  if(car.x - wall.x < car.width/2 + wall.width/2 && wall.x - car.x < wall.width/2 + car.width/2) {
     car.velocityX = 0;
     var deformation = 0.5 * weight * speed * speed/22509;
         if(deformation > 180){
-          car.shapeColor = color(225,0,0);
-          textSize(24);
-          color("yellow")
-          Text("Average",200,200);
+          car.shapeColor = "red";
+          textSize(30);
+          fill("red")
+          text("Lethal",200,200);
         }
         if(deformation < 180 && deformation > 100){
-          car.shapeColor = color(230,230,0);
+          car.shapeColor = "yellow";
+          textSize(30);
+          fill("yellow")
+          text("Average",300,200);
         }
         if(deformation < 180){
-          car.shapeColor = color(0,225,0);
+          car.shapeColor = "lightgreen";
+          textSize(30);
+          fill("lightgreen")
+          text("Good",200,200);
         }
     }
 

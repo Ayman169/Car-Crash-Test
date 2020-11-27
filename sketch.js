@@ -33,7 +33,7 @@ function draw() {
           fill("yellow")
           text("Average",300,200);
         }
-        if(deformation < 180){
+        if(deformation < 100){
           car.shapeColor = "lightgreen";
           textSize(30);
           fill("lightgreen")
